@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/orbitkalender">
+	<Resource name="jdbc/orbitkalender" type="javax.sql.DataSource" driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost/orbitkalender?useSLL=false" username="cursist" password="cursist" closeMethod="close"></Resource></Context>
