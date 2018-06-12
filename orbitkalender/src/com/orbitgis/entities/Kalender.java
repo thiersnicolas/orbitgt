@@ -6,12 +6,14 @@ import java.util.Map;
 import java.util.Set;
 
 public class Kalender {
-	private Map<LocalDate, Set<KalenderEntry>> kalender;
+	private Map<LocalDate, Set<KalenderEntry>> kalenderMap;
 	private List<Gebruiker> gebruikers;
+	private List<Taak> taken;
 
-	public Kalender(Map<LocalDate, Set<KalenderEntry>> kalender, List<Gebruiker> gebruikers) {
-		this.kalender = kalender;
+	public Kalender(Map<LocalDate, Set<KalenderEntry>> kalenderMap, List<Gebruiker> gebruikers, List<Taak> taken) {
+		this.kalenderMap = kalenderMap;
 		this.gebruikers = gebruikers;
+		this.taken = taken;
 	}
 
 	public List<Gebruiker> getGebruikers() {
@@ -23,13 +25,18 @@ public class Kalender {
 	}
 
 	public Map<LocalDate, Set<KalenderEntry>> getKalenderMap() {
-		return kalender;
+		return kalenderMap;
 	}
 
-	public void setKalender(Map<LocalDate, Set<KalenderEntry>> kalender) {
-		this.kalender = kalender;
+	public void setKalenderMap(Map<LocalDate, Set<KalenderEntry>> kalender) {
+		this.kalenderMap = kalender;
 	}
-	
-	
 
+	public List<Taak> getTaken() {
+		return taken;
+	}
+
+	public void setTaken(List<Taak> taken) {
+		this.taken = taken;
+	}
 }

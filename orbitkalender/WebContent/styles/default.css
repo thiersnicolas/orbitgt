@@ -1,0 +1,16 @@
+table.kalender {
+	border-collapse: collapse;
+}
+
+tbody tr td{
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+tbody.entries tr:nth-child(odd) {
+	background-color: #e6e3e6;
+}
+
+tbody.entries tr:nth-child(even) {
+	background-color: white;
+}

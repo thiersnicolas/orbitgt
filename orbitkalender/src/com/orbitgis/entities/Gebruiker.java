@@ -6,6 +6,10 @@ public class Gebruiker implements Comparable<Gebruiker>{
 	private String naam;
 	private LocalDate beginVerlof;
 	private LocalDate eindeVerlof;
+	
+	public Gebruiker(String naam) {
+		this.naam = naam;
+	}
 
 	public Gebruiker(String naam, LocalDate beginVerlof, LocalDate eindeVerlof) {
 		this.naam = naam;
@@ -38,7 +42,7 @@ public class Gebruiker implements Comparable<Gebruiker>{
 	}
 	
 	public boolean heeftVerlof(LocalDate datum) {
-		if (datum.isAfter(this.beginVerlof)&& datum.isBefore(this.eindeVerlof)) {
+		if (datum.isAfter(this.beginVerlof.minusDays(1))&& datum.isBefore(this.eindeVerlof.plusDays(1))) {
 			return true;
 		} else {
 			return false;
