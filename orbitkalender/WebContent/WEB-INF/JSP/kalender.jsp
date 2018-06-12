@@ -22,7 +22,7 @@
 		<c:forEach var="entry" items="${kalendermap}">
 			<fmt:parseDate value='${entry.key}' type='date' pattern="yyyy-MM-dd" var="datumAlsDate"/>
 			<tr>
-				<td><fmt:formatDate value="${datumAlsDate}" type='date'/></td>
+				<td><fmt:formatDate value="${datumAlsDate}" type='date' pattern="dd-MM-yyyy"/></td>
 				<c:forEach var="kalenderEntry" items="${entry.value}">
 					<td>${kalenderEntry.entry}</td>
 				</c:forEach>
