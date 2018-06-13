@@ -44,6 +44,7 @@ public class Main {
 		for (Taak taak:kalender.getTaken()) {
 			System.out.println(taak.getNaam());
 		}
+		System.out.println();
 		for (Gebruiker gebruiker:kalender.getGebruikers()) {
 			System.out.println(gebruiker.getNaam() + " - " + gebruiker.getBeginVerlof() + " - " + gebruiker.getEindeVerlof());
 		}
