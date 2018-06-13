@@ -9,6 +9,7 @@ import com.orbitgis.entities.Kalender;
 import com.orbitgis.entities.Taak;
 import com.orbitgis.repository.KalenderRepository;
 import com.orbitgis.util.KalenderCreator;
+import com.orbitgis.util.KalenderFileRW;
 import com.orbitgis.util.Util;
 
 public class Main {
@@ -46,6 +47,10 @@ public class Main {
 		for (Gebruiker gebruiker:kalender.getGebruikers()) {
 			System.out.println(gebruiker.getNaam() + " - " + gebruiker.getBeginVerlof() + " - " + gebruiker.getEindeVerlof());
 		}
+		
+		String locatie = "C:\\Users\\nicolas.thiers\\"
+                + "Desktop\\kalender.xls";
+		System.out.println(KalenderFileRW.kalenderNaarExcel(kalenderUitDatabase, locatie));
 	}
 
 }
